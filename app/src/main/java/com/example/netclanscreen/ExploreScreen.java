@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.google.android.material.tabs.TabLayout;
 
 public class ExploreScreen extends AppCompatActivity {
-    ImageView refine;
+    ImageView refine, menu;
     TabLayout tab;
     ViewPager2 viewPager;
     ViewPagerAdapter ViewPagerAdapter;
@@ -25,6 +25,7 @@ public class ExploreScreen extends AppCompatActivity {
         ViewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(ViewPagerAdapter);
         refine = findViewById(R.id.refine);
+        menu = findViewById(R.id.imageView);
 
         tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -54,6 +55,13 @@ public class ExploreScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ProfileScreen.class);
                 startActivity(intent);
             }
         });

@@ -25,6 +25,14 @@
             android:name=".MainActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".ProfileScreen"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".notesScreen"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>
